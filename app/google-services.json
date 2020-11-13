@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "387333534094",
+    "firebase_url": "https://okchat-b6ea7.firebaseio.com",
+    "project_id": "okchat-b6ea7",
+    "storage_bucket": "okchat-b6ea7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387333534094:android:49e92e7d38e45a80b1b4df",
+        "android_client_info": {
+          "package_name": "com.hungnd.okchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387333534094-r9vdmajoncdpbb7d71t6cudnr700vals.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungnd.okchat",
+            "certificate_hash": "ca6abde87b22a9534bfef374ee5eddb32ce9b5db"
+          }
+        },
+        {
+          "client_id": "387333534094-0pq71crkteeqhcu3b0ledffd9c9t5epa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDAxW0u1eIxRLmpTjKlShWRDDq2glgfsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387333534094-0pq71crkteeqhcu3b0ledffd9c9t5epa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
