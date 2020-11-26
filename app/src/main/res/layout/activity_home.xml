@@ -1,6 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/contras"
+        android:padding="@dimen/size12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/c_imv_avt"
+            android:layout_width="@dimen/size50dp"
+            android:layout_height="@dimen/size50dp"
+            android:layout_marginTop="@dimen/size0dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/contras"
+            app:layout_constraintTop_toTopOf="@+id/contras" />
+
+        <TextView
+            android:id="@+id/tv_chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat"
+            android:textSize="@dimen/size32dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/c_imv_avt"
+            app:layout_constraintEnd_toStartOf="@+id/c_imv_camera"
+            app:layout_constraintStart_toEndOf="@+id/c_imv_avt"
+            app:layout_constraintTop_toTopOf="@+id/c_imv_avt"
+            tools:ignore="SpUsage" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/c_imv_camera"
+            android:layout_width="@dimen/size32dp"
+            android:layout_height="@dimen/size32dp"
+            android:layout_marginEnd="@dimen/size24dp"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_chat_title"
+            app:layout_constraintEnd_toStartOf="@+id/c_imv_create"
+            app:layout_constraintTop_toTopOf="@+id/tv_chat_title" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/c_imv_create"
+            android:layout_width="@dimen/size32dp"
+            android:layout_height="@dimen/size32dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@+id/c_imv_camera"
+            app:layout_constraintEnd_toEndOf="@+id/contras"
+            app:layout_constraintTop_toTopOf="@+id/c_imv_camera" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size24dp"
+            android:background="@drawable/circle_style"
+            android:padding="@dimen/size8dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/size16dp"
+            android:text="@string/search"
+            android:textSize="@dimen/size24dp"
+            app:layout_constraintEnd_toEndOf="@+id/contras"
+            app:layout_constraintStart_toStartOf="@+id/contras"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:paddingTop="@dimen/size8dp"
+        android:paddingBottom="@dimen/size8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/contras_mess"
+          app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+          app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+          app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+          app:layout_constraintEnd_toStartOf="@+id/contras_contact"
+          android:layout_width="wrap_content"
+          android:padding="@dimen/size24dp"
+          android:layout_height="wrap_content"
+          >
+          <ImageView
+              android:id="@+id/imv_message"
+              android:layout_width="@dimen/size40dp"
+              android:layout_height="@dimen/size40dp"
+              android:layout_marginBottom="@dimen/size12dp"
+              app:layout_constraintBottom_toTopOf="@+id/tv_message"
+              app:layout_constraintHorizontal_chainStyle="spread"
+              app:layout_constraintStart_toStartOf="@+id/contras_mess"
+              app:layout_constraintTop_toTopOf="@+id/contras_mess"
+              app:srcCompat="@drawable/ic_message" />
+
+          <TextView
+              android:id="@+id/tv_message"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/message"
+              android:textSize="@dimen/size16dp"
+              android:textStyle="bold"
+              app:layout_constraintBottom_toBottomOf="@+id/contras_mess"
+              app:layout_constraintEnd_toEndOf="@+id/imv_message"
+              app:layout_constraintStart_toStartOf="@+id/imv_message" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/contras_contact"
+           app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+           app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+           app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+           app:layout_constraintStart_toEndOf="@+id/contras_mess"
+           android:padding="@dimen/size24dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <ImageView
+               android:id="@+id/imv_contact"
+               android:layout_width="@dimen/size40dp"
+               android:layout_height="@dimen/size40dp"
+               android:layout_marginBottom="@dimen/size12dp"
+               app:layout_constraintBottom_toTopOf="@id/tv_contact"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/contras_contact"
+               app:srcCompat="@drawable/ic_users" />
+
+           <TextView
+               android:id="@+id/tv_contact"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/contact"
+               android:textSize="@dimen/size16dp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="@+id/imv_contact"
+               app:layout_constraintEnd_toEndOf="@+id/imv_contact"
+               app:layout_constraintBottom_toBottomOf="parent"
+               tools:layout_editor_absoluteX="16dp" />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frm_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contras" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

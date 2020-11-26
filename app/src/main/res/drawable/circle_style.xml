@@ -7,7 +7,7 @@
                 android:topRightRadius="20dp"
                 android:bottomRightRadius="20dp"
                 android:radius="10dp"/>
-            <solid android:color="#00bcd4"/>
+            <solid android:color="#B7C0C1"/>
         </shape>
     </item>
 </selector>
